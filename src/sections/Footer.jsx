@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="max-container">
       <div className="flex justify-between items-start gap-20 flex-wrap max-lg:flex-col">
         <div className="flex flex-col items-start">
-          {/*  Logo + Paragaph + Icon  */}
+          {/*  Logo + Paragraph + Icon  */}
           <a href="/">
             <img
               src={footerLogo}
@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
 
         {/*  Footer Links */}
-        <div className="flex flex-1 justify-evenly  lg:gap-10 gap-20 text-slate-gray flex-wrap">
+        <div className="flex flex-1 justify-evenly lg:gap-10 gap-20 text-slate-gray flex-wrap">
           {footerLinks.map((section) => (
             <div key={section.title}>
               <h4 className="font-montserrat text-xl leading-normal font-medium mb-6 text-white">
@@ -45,7 +45,7 @@ const Footer = () => {
               <ul>
                 {section.links.map((link) => (
                   <li
-                    className="mt-2 font-montserrat text-base leading-normal text-4xl text-white-400  text-slate-gray  hover:text-coral-red"
+                    className="mt-2 font-montserrat text-base leading-normal text-4xl text-white-400 text-slate-gray hover:text-coral-red"
                     key={link.name}
                   >
                     <a href={link.link}>{link.name}</a>
@@ -57,9 +57,9 @@ const Footer = () => {
         </div>
       </div>
 
-      {/*  Copy write  */}
+      {/*  Copy write */}
       <div className="flex justify-between text-white-400 mt-20 max-sm:flex-col max-sm:items-center">
-        <div className="flex flex-1 justify-start items-center  font-montserrat cursor-pointer gap-2">
+        <div className="flex flex-1 justify-start items-center font-montserrat cursor-pointer gap-2">
           <img
             src={copyrightSign}
             alt="copyright sign"
@@ -72,6 +72,22 @@ const Footer = () => {
 
         <p className="font-montserrat cursor-pointer">Terms & Conditions</p>
       </div>
+
+
+      <div className="mt-10 text-center p-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+        <h4 className="font-montserrat text-2xl text-white mb-2">
+          Created by <span className="font-bold">Mahendra Kale</span>
+        </h4>
+        <p className="text-white text-md mb-4">Let’s connect!</p>
+        <a
+          href="https://www.linkedin.com/in/mahendra-kale/"
+          className="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-md"
+        >
+          Visit my LinkedIn
+        </a>
+      </div>
+
+
     </footer>
   );
 };
